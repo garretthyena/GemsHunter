@@ -16,6 +16,9 @@ public class ThirdPersonMovement : MonoBehaviour
     public float fallVelocity;
     public float jumpForce;
 
+    public bool isOnSlope = false;
+    private Vector3 hitNormal;
+
     float turnSmoothVelocity;
 
     // Update is called once per frame
@@ -73,5 +76,17 @@ public class ThirdPersonMovement : MonoBehaviour
             movePlayer.y = fallVelocity;
         }
         //this creates falling acceleration
+    }
+
+    public void SlideDown()
+    {
+        isOnSlope = Vector3.Angle(Vector3.up, hitNormal) >= player.slopeLimit;
+        //calcula la dirección entre la posición actual y hacia arriba
+    }
+
+    void onControllerColliderHit(ControllerCollider hit)
+    {
+        hitNormal = hit.normal;
+        //hitNormal references the default height of where our player is placed
     }
 }
