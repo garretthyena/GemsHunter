@@ -217,6 +217,8 @@ namespace StarterAssets
 				Debug.Log("move");
 			}
 
+			//else audioController.GetComponent<AudioController>().isWalking = false;  
+
 
 			Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
 
