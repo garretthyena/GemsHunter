@@ -14,6 +14,8 @@ namespace StarterAssets
 #endif
 	public class ThirdPersonController : MonoBehaviour
 	{
+        public GameObject audioController;
+
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 2.0f;
@@ -211,6 +213,8 @@ namespace StarterAssets
 
 				// rotate to face input direction relative to camera position
 				transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+				audioController.GetComponent<AudioController>().isWalking = true;
+				Debug.Log("move");
 			}
 
 
@@ -256,7 +260,9 @@ namespace StarterAssets
 					// update animator if using character
 					if (_hasAnimator)
 					{
+                        audioController.GetComponent<AudioController>().isWalking = false;  
 						_animator.SetBool(_animIDJump, true);
+						Debug.Log("jump");
 					}
 				}
 
