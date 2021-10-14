@@ -27,7 +27,7 @@ public class AudioController : MonoBehaviour
 
     IEnumerator Steps()
     {
-        yield return new WaitForSeconds(0.32f);
+        yield return new WaitForSeconds(0.10f);
         if(isWalking == true)
         {
             AudioSteps();

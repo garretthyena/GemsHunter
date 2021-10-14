@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.429
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.21573901, g: 0.23477808, b: 0.26625037, a: 0.429}
+  m_IndirectSpecularColor: {r: 0.21573988, g: 0.23477831, b: 0.26625028, a: 0.429}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1397,7 +1397,7 @@ MonoBehaviour:
   BirdsSFX: {fileID: 8300000, guid: 55a757ae81d50d34abecdc2e81111842, type: 3}
   Steps_GRASS_SFX: {fileID: 8300000, guid: 0d9e990d73b9a0a4399b39f13f6141fd, type: 3}
   isWalking: 0
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 666494122}
 --- !u!4 &1003886827
 Transform:
   m_ObjectHideFlags: 0
